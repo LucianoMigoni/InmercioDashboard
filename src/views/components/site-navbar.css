@@ -1,0 +1,41 @@
+/* Navbar principal del sitio */
+
+:root {
+  --site-nav-h: 59px;
+}
+
+.site-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,.88); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--brand-border);
+  transition: box-shadow .3s cubic-bezier(.4,0,.2,1);
+  font-family: var(--font-sans);
+}
+.site-nav.sticky { position: sticky; }
+.site-nav.scrolled { box-shadow: 0 4px 18px rgba(71,11,0,.06); }
+
+.site-nav .sn-wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.site-nav .sn-inner {
+  display: flex; align-items: center; gap: 28px;
+  padding: 14px 0;
+}
+.site-nav .sn-logo img { height: 30px; display: block; }
+
+.site-nav .sn-links { display: flex; gap: 4px; flex: 1; justify-content: center; }
+.site-nav .sn-links a {
+  font-size: 14px; font-weight: var(--fw-medium); color: var(--ink-500);
+  padding: 8px 13px; border-radius: var(--radius-pill);
+  transition: all .2s;
+  text-decoration: none;
+}
+.site-nav .sn-links a:hover { color: var(--ink-900); background: var(--canvas); }
+
+/* Botones de la derecha */
+.site-nav .sn-cta { display: flex; gap: 8px; margin-left: auto; }
+
+@media (max-width: 1000px) {
+  .site-nav .sn-links { display: none; }
+}
+@media (max-width: 680px) {
+  .site-nav .sn-btn-ghost { display: none; }
+}

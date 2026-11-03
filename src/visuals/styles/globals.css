@@ -1,0 +1,30 @@
+::selection {
+  background-color: #FFAD60;
+  color: #ffffff;
+}
+
+/* Evita que la pagina se desborde de costado */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Los textarea no se pueden estirar de mas */
+textarea {
+  max-width: 100%;
+}
+
+/* Cursor para cambiar el tamaño */
+.chat-resize-handle {
+  cursor: col-resize;
+  user-select: none;
+  touch-action: none;
+}

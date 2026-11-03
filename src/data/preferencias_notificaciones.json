@@ -1,0 +1,13 @@
+[
+  {
+    "id": "00000001-0008-4000-8000-000000000000",
+    "negocio_id": "00000001-0004-4000-8000-000000000000",
+    "perfil_id": "00000001-0005-4000-8000-000000000000",
+    "email_activo": false,
+    "avisar_stock_bajo": false,
+    "avisar_sin_movimiento": false,
+    "dias_sin_movimiento_umbral": 30,
+    "avisar_pedidos": false,
+    "creado_en": "2025-11-12T10:32:00-03:00"
+  }
+]

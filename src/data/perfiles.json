@@ -1,0 +1,11 @@
+[
+  {
+    "id": "00000001-0005-4000-8000-000000000000",
+    "nombre": "Jorge",
+    "apellido": "Garcia",
+    "telefono": "+54 11 5555 0123",
+    "foto_url": null,
+    "email": "ana.garcia@inmercio.com",
+    "creado_en": "2025-11-12T10:30:00-03:00"
+  }
+]

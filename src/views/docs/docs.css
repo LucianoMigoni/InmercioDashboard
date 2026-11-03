@@ -1,0 +1,70 @@
+/* Estilos del centro de ayuda */
+
+.docs-page {
+  /* No hay navbar arriba */
+  --site-nav-h: 0px;
+  font-family: var(--font-ui);
+  background: var(--canvas);
+  color: var(--ink-900);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+}
+.docs-page button { font-family: var(--font-ui); }
+.docs-page a { -webkit-tap-highlight-color: transparent; }
+
+/* Iconos */
+.docs-page .ic { display: inline-flex; align-items: center; justify-content: center; line-height: 0; }
+.docs-page .ic > svg { width: 100%; height: 100%; display: block; stroke-width: 2; }
+
+/* Barras de scroll */
+.docs-page .sidebar::-webkit-scrollbar { width: 9px; }
+.docs-page .sidebar::-webkit-scrollbar-thumb { background: #E0E0E0; border-radius: 999px; border: 2px solid var(--canvas); }
+.docs-page .sidebar::-webkit-scrollbar-thumb:hover { background: #cfcfcf; }
+
+/* Menu lateral */
+.docs-page .navitem { transition: background .16s ease; }
+.docs-page .navitem:hover { background: rgba(255,255,255,.7) !important; }
+.docs-page .subitem { transition: color .14s ease, background .14s ease; }
+.docs-page .subitem:hover { color: #E8801E !important; background: #FFF6EE; }
+
+/* Botones */
+.docs-page .btn:hover { opacity: .92; }
+.docs-page .btn-white:hover, .docs-page .back-link:hover { border-color: #FFAD60 !important; opacity: 1; }
+.docs-page .fb-btn:hover { border-color: #FFAD60 !important; color: #C85F0A !important; background: #FFF6EE !important; }
+.docs-page .x-btn:hover { color: var(--ink-700) !important; }
+.docs-page .crumb:hover { color: #E8801E !important; }
+
+/* Tarjetas */
+.docs-page .cat-card:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgba(71,11,0,.08) !important; border-color: #FFD9B3 !important; }
+.docs-page .cat-card:hover .cat-arrow { transform: translateX(3px); }
+.docs-page .cat-arrow { transition: transform .18s ease; }
+.docs-page .pop-row:hover { border-color: #FFD9B3 !important; transform: translateX(2px); }
+.docs-page .pop-row:hover .pop-arrow { color: #F5923E !important; transform: translateX(2px); }
+.docs-page .pop-arrow { transition: transform .18s ease, color .18s ease; }
+.docs-page .art-row:hover { border-color: #FFD9B3 !important; transform: translateY(-2px); box-shadow: 0 8px 22px rgba(71,11,0,.07) !important; }
+.docs-page .art-row:hover .art-arrow { color: #F5923E !important; transform: translateX(3px); }
+.docs-page .art-arrow { transition: transform .18s ease, color .18s ease; }
+.docs-page .faq-cta { transition: border-color .16s ease, transform .16s ease; }
+.docs-page .faq-cta:hover { border-color: #FFC894 !important; transform: translateY(-2px); }
+.docs-page .mail-card:hover { border-color: #C5D6F0 !important; transform: translateY(-2px); }
+.docs-page .acc-btn:hover { background: #FFFaf5 !important; }
+
+/* Pantallas chicas */
+@media (max-width: 900px) {
+  .docs-page .sidebar { display: none !important; }
+}
+@media (max-width: 760px) {
+  .docs-page .footer-grid { grid-template-columns: 1fr !important; }
+}
+
+/* Animacion al entrar */
+@keyframes docs-view-in { from { transform: translateY(6px); } to { transform: none; } }
+@media (prefers-reduced-motion: no-preference) {
+  .docs-page main > div { animation: docs-view-in .28s cubic-bezier(.4,0,.2,1) both; }
+}
+/* Animacion al abrir secciones */
+@keyframes docs-reveal { from { transform: translateY(-5px); } to { transform: none; } }
+@media (prefers-reduced-motion: no-preference) {
+  .docs-page .reveal { animation: docs-reveal .22s cubic-bezier(.4,0,.2,1) both; }
+}
